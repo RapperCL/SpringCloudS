@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      name: configtest
+      profile: pro
+      label: master
+      discovery:
+        enabled: true
+        service-id: springcloud-config-server
+eureka:
+  client:
+    service-url: http://localhost:8761/eureka/

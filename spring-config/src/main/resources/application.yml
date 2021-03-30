@@ -1,13 +1,17 @@
 spring:
   application:
     name: springCloud-config
-  cloud:
-    config:
-      server:
-        git:
-          uri:
+  profiles:
+    active: native
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/RapperCL/SpringCloudS
+#          username: 775523362@qq.com
+#          password: best777github
 eureka:
   client:
-    service-url:
+    service-url: http://localhost:8761/eureka
 server:
   port: 8099
