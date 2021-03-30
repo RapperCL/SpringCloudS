@@ -1,0 +1,14 @@
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: credit-service
+
+eureka:
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 3 #发送心跳间隔30s->3s 发送一次
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

@@ -1,0 +1,15 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+    lease-expiration-duration-in-seconds: 9  #90s->9s 超过9s，没有更新的服务实例，就会从注册列表中剔除
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  server:
+    enableSelfPreservation: false
+    response-cache-update-interval-ms: 3000  #readOnly缓存和readwrite缓存之间的同步频率，30s->3S
+    eviction-interval-timer-in-ms: 6000 #每隔6s进行检测一次，服务实例是否离线了
