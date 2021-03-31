@@ -5,7 +5,11 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/RapperCL/SpringCloudS
+          search-paths: configs
+          username: RapperCL
+          password: best777github
+      label: master
 #  profiles:
 #    active: native
 server:
