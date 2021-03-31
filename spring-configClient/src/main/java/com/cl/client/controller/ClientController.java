@@ -13,7 +13,7 @@ public class ClientController {
      * @Value 从配置文件中去除对于的配置项
      */
     @Value("${word}")
-    private  String word;
+    private String word;
 
     @GetMapping("/test")
     public String test(@RequestParam String name){
